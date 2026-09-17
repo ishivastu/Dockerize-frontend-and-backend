@@ -21,6 +21,10 @@ const dataSchema = new mongoose.Schema({
 
 const Data = mongoose.model('Data', dataSchema);
 
+app.get('/', (req, res) => {
+    res.send('Hello from the backend!');
+});
+
 app.post('/api/data', (req, res) => {
     const data = req.body;
 
